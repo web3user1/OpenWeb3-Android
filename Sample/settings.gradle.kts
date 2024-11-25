@@ -17,7 +17,7 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         maven {
-            url = uri("https://raw.githubusercontent.com/web3user1/OpenWeb3-Android/main/aar/") // 本地 Maven 仓库路径
+            url = uri("https://raw.githubusercontent.com/web3user1/OpenWeb3-Android/main/aar/1.0.0") // 本地 Maven 仓库路径
         }
     }
 }
