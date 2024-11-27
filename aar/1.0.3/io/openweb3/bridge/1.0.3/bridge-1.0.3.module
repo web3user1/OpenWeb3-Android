@@ -1,0 +1,104 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.openweb3",
+    "module": "bridge",
+    "version": "1.0.3",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.6"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.8.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "bridge-1.0.3.aar",
+          "url": "bridge-1.0.3.aar",
+          "size": 2049,
+          "sha512": "f058e161f8a8e31080ef1ebb14c50790556fcb0db84208d35d72d555cf5cefd6644f5d57158a62eead9fe6613c1a8b4c3746462f1738afda193a4278b7201186",
+          "sha256": "8955cf646d2e0844a479c72b3850706bf9a0060d2c30a8e66521a2607ddf289d",
+          "sha1": "41c8a602947c0f71ef91f0a97fb977c8cea2c632",
+          "md5": "f09e3f09f0bad3141d85afaf685adcfe"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.core",
+          "module": "core-ktx",
+          "version": {
+            "requires": "1.13.1"
+          }
+        },
+        {
+          "group": "androidx.appcompat",
+          "module": "appcompat",
+          "version": {
+            "requires": "1.6.1"
+          }
+        },
+        {
+          "group": "androidx.activity",
+          "module": "activity-ktx",
+          "version": {
+            "requires": "1.8.2"
+          }
+        },
+        {
+          "group": "com.google.android.material",
+          "module": "material",
+          "version": {
+            "requires": "1.11.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.8.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "bridge-1.0.3.aar",
+          "url": "bridge-1.0.3.aar",
+          "size": 2049,
+          "sha512": "f058e161f8a8e31080ef1ebb14c50790556fcb0db84208d35d72d555cf5cefd6644f5d57158a62eead9fe6613c1a8b4c3746462f1738afda193a4278b7201186",
+          "sha256": "8955cf646d2e0844a479c72b3850706bf9a0060d2c30a8e66521a2607ddf289d",
+          "sha1": "41c8a602947c0f71ef91f0a97fb977c8cea2c632",
+          "md5": "f09e3f09f0bad3141d85afaf685adcfe"
+        }
+      ]
+    }
+  ]
+}
