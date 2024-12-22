@@ -42,8 +42,6 @@ class MyApplication : Application(), IAppDelegate {
     override fun onCreate() {
         super.onCreate()
 
-        sigIn()
-
         val openPlatformPlugin = PluginsManager.getPlugin<OpenPlatformPlugin>(PLUGIN_OPEN_PLATFORM)!!
         val miniAppService = openPlatformPlugin.getMiniAppService()
 
@@ -62,6 +60,8 @@ class MyApplication : Application(), IAppDelegate {
             .build()
 
         miniAppService.setup(config = appConfig)
+
+        sigIn()
     }
 
     private fun sigIn() {
@@ -69,6 +69,7 @@ class MyApplication : Application(), IAppDelegate {
         openPlatformPlugin.signIn(
             context = this,
             verifier = "123",
+            isDev = false,
             idTokenProvider = { idTokenProvider() },
             onVerifierSuccess = {
 
@@ -146,6 +147,9 @@ class MyApplication : Application(), IAppDelegate {
     override suspend fun sendMessageToPeer(app: IMiniApp, content: String?) : Boolean {
         sendMessageLiveData.postValue(content)
         return true
+    }
+
+    override fun shareLinkOrText(app: IMiniApp, linkOrText: String) {
     }
 
     override fun onMinimization(app: IMiniApp) {

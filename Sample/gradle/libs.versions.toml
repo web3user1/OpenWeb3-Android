@@ -2,7 +2,8 @@
 accompanistInsets = "0.15.0"
 activityKtx = "1.8.2"
 agp = "7.4.2"
-bridge = "1.0.3"
+bridge = "1.0.4"
+glide = "4.15.1"
 converterMoshi = "2.9.0"
 kotlin = "1.8.10"
 kapt = "1.4.20"
@@ -36,6 +37,8 @@ accompanist-systemuicontroller = { module = "com.google.accompanist:accompanist-
 androidx-activity-ktx = { module = "androidx.activity:activity-ktx", version.ref = "activityKtx" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 bridge = { module = "io.openweb3:bridge", version.ref = "bridge" }
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+glideCompiler = { module = "com.github.bumptech.glide:compiler", version.ref = "glide" }
 converter-moshi = { module = "com.squareup.retrofit2:converter-moshi", version.ref = "converterMoshi" }
 core = { module = "io.openweb3:core", version.ref = "bridge" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }

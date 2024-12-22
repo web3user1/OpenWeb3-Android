@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
     id("kotlin-kapt")
+    kotlin("kapt")
 }
 
 
@@ -67,6 +68,9 @@ dependencies {
 
     implementation(libs.bridge)
     implementation(libs.core)
+
+    implementation(libs.glide)
+    kapt(libs.glideCompiler)
 
     implementation(libs.multidex)
 

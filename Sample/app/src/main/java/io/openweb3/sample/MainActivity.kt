@@ -56,6 +56,13 @@ import kotlinx.coroutines.launch
 private val openPlatformPlugin = PluginsManager.getPlugin<OpenPlatformPlugin>(PLUGIN_OPEN_PLATFORM)!!
 private val miniAppService = openPlatformPlugin.getMiniAppService()
 
+val uriMarketPlace = Uri.Builder()
+    .appendQueryParameter("roomId", "1")
+    .appendQueryParameter("roomName", "Test Tribe")
+    .appendQueryParameter("roomAvatar", "https://thumb.ac-illust.com/78/782445b4704adca448601a89d4b80f7c_w.jpeg")
+    .appendQueryParameter("from", "space")
+    .build()
+
 class MainActivity : AppCompatActivity() {
     companion object {
         // 改为应用的deeplink
@@ -70,13 +77,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private var miniApp: IMiniApp? = null
-
-    val uriMarketPlace = Uri.Builder()
-        .appendQueryParameter("roomId", "1")
-        .appendQueryParameter("roomName", "Test Tribe")
-        .appendQueryParameter("roomAvatar", "https://thumb.ac-illust.com/78/782445b4704adca448601a89d4b80f7c_w.jpeg")
-        .appendQueryParameter("from", "space")
-        .build()
 
     private fun preloadApps(owner: LifecycleOwner, context: Context) {
         listOf("10").forEach {
