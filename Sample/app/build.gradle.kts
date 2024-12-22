@@ -63,9 +63,10 @@ android {
 
 dependencies {
 
+    implementation(project(":walletproviders"))
+
     implementation(libs.bridge)
     implementation(libs.core)
-
 
     implementation(libs.multidex)
 

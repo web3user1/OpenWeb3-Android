@@ -42,7 +42,7 @@ object AndroidUtils {
     // preference key
     const val APPLICATION_THEME_KEY = "APPLICATION_THEME_KEY"
 
-    // the theme possible values
+    // the theme possible raw
     private const val SYSTEM_THEME_VALUE = "system"
     private const val THEME_DARK_VALUE = "dark"
     private const val THEME_LIGHT_VALUE = "light"

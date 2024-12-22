@@ -49,18 +49,12 @@ import io.openweb3.plugins.openplatform.miniapp.IMiniApp
 import io.openweb3.plugins.openplatform.miniapp.WebAppLaunchWithDialogParameters
 import io.openweb3.plugins.openplatform.miniapp.WebAppPreloadParameters
 import io.openweb3.sample.ui.theme.MiniappandroidTheme
+import io.openweb3.walletproviders.WalletBridgeProviderImpl
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.launch
 
 private val openPlatformPlugin = PluginsManager.getPlugin<OpenPlatformPlugin>(PLUGIN_OPEN_PLATFORM)!!
 private val miniAppService = openPlatformPlugin.getMiniAppService()
-
-val uriMarketPlace = Uri.Builder()
-    .appendQueryParameter("roomId", "1")
-    .appendQueryParameter("roomName", "Test Tribe")
-    .appendQueryParameter("roomAvatar", "https://thumb.ac-illust.com/78/782445b4704adca448601a89d4b80f7c_w.jpeg")
-    .appendQueryParameter("from", "space")
-    .build()
 
 class MainActivity : AppCompatActivity() {
     companion object {
@@ -76,6 +70,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private var miniApp: IMiniApp? = null
+
+    val uriMarketPlace = Uri.Builder()
+        .appendQueryParameter("roomId", "1")
+        .appendQueryParameter("roomName", "Test Tribe")
+        .appendQueryParameter("roomAvatar", "https://thumb.ac-illust.com/78/782445b4704adca448601a89d4b80f7c_w.jpeg")
+        .appendQueryParameter("from", "space")
+        .build()
 
     private fun preloadApps(owner: LifecycleOwner, context: Context) {
         listOf("10").forEach {
@@ -258,9 +259,7 @@ fun LaunchTgButton(lifecycleOwner: LifecycleOwner, complete: (IMiniApp?) -> Unit
     val showDialog = remember { mutableStateOf(false) }
     val showDAppDialog = remember { mutableStateOf(false) }
 
-    var textInput by remember { mutableStateOf("https://m.digifinex.com/en-ww/tg#tgWebAppData=auth_date%3D1730705723%26hash%3D7be6bd3843ffec87429a78d490f8cdb69e9a1422164738d1ccf13552f37b7bfd%26start_param%3D%26user%3D%257B%2522added_to_attachment_menu%2522%253Afalse%252C%2522allows_write_to_pm%2522%253Afalse%252C%2522first_name%2522%253A%2522New003%2522%252C%2522id%2522%253A1430184776%252C%2522is_bot%2522%253Afalse%252C%2522is_premium%2522%253Afalse%252C%2522last_name%2522%253A%2522%2522%252C%2522username%2522%253A%2522%2522%252C%2522language_code%2522%253A%2522zh_CN%2522%252C%2522photo_url%2522%253A%2522https%253A%252F%252Fassets.mimo.immo%252Ficon%252F554307-1730536375934.png%253Fsize%253Dsmall%2526type%253Davatar%2522%252C%2522provider%2522%253A%2522zapry%2522%252C%2522extra%2522%253Anull%257D&tgWebAppPlatform=Android&tgWebAppStartParam=&tgWebAppThemeParams=%7B%22accent_text_color%22%3A%22%231C93E3%22%2C%22bg_color%22%3A%22%23FFFFFF%22%2C%22button_color%22%3A%22%23A8A8A8%22%2C%22button_text_color%22%3A%22%23A8A8A8%22%2C%22destructive_text_color%22%3A%22%23CC2929%22%2C%22header_bg_color%22%3A%22%23527DA3%22%2C%22hint_color%22%3A%22%23A8A8A8%22%2C%22link_color%22%3A%22%23A8A8A8%22%2C%22progress_circle_color%22%3A%22%231C93E3%22%2C%22secondary_bg_color%22%3A%22%23F0F0F0%22%2C%22section_header_text_color%22%3A%22%233A95D5%22%2C%22sheet_scroll_up%22%3A%22%23E1E4E8%22%2C%22subtitle_text_color%22%3A%22%2382868A%22%2C%22text_color%22%3A%22%23222222%22%2C%22text_err_color%22%3A%22%23CC4747%22%7D&tgWebAppVersion=7.8") }
-    //var textInput by remember { mutableStateOf("https://game1.catizen.ai/game/tonkeeper/10215317") }
-    //var textInput by remember { mutableStateOf("https://openweb3.io/digifinex_bot/digifinex") }
+    var textInput by remember { mutableStateOf("https://www.magiceden.io/me") }
 
     Column(horizontalAlignment = Alignment.CenterHorizontally) {
         TextField(
@@ -307,6 +306,7 @@ fun LaunchTgButton(lifecycleOwner: LifecycleOwner, complete: (IMiniApp?) -> Unit
             .owner(lifecycleOwner)
             .context(context)
             .url(tgUrl)
+            .bridgetProvider(WalletBridgeProviderImpl(context = context, owner = lifecycleOwner, dappUrl = tgUrl))
             .onDismissListener {
                 showDAppDialog.value = false
             }
