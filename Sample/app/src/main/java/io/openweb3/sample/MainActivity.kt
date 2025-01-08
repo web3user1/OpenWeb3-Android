@@ -336,8 +336,9 @@ fun LaunchTgButton(lifecycleOwner: LifecycleOwner, complete: (IMiniApp?) -> Unit
         val config = WebAppLaunchWithDialogParameters.Builder()
             .owner(lifecycleOwner)
             .context(context)
-            .url(tgUrl)
+            .url("https://openweb3.io/magiceden_bot/magiceden")
             .isLaunchUrl(true)
+            .bridgetProvider(WalletBridgeProviderImpl(context = context, owner = lifecycleOwner))
             .onDismissListener {
                 showDialog.value = false
             }
@@ -379,6 +380,7 @@ fun MarketPlaceButton(context:Context,lifecycleOwner: LifecycleOwner) {
             .context(context)
             .startParam(uriMarketPlace.query)
             .miniAppId("10")
+            .bridgetProvider(WalletBridgeProviderImpl(context = context, owner = lifecycleOwner))
             .onDismissListener {
             }
             .build()

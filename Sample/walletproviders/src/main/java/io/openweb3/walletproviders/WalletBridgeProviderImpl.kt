@@ -12,7 +12,7 @@ import java.util.LinkedList
 class WalletBridgeProviderImpl(
     private val context: Context,
     private val owner: LifecycleOwner,
-    private val dappUrl: String
+    private val dappUrl: String? = null
     ) : BridgeProvider{
 
     companion object {

@@ -8,7 +8,7 @@ import org.json.JSONObject
 class WebAppInterface(
     private val context: Context,
     private val webView: WebView,
-    private val dappUrl: String
+    private val dappUrl: String?
 ) {
     @JavascriptInterface
     fun postMessage(json: String) {
