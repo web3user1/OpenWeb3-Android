@@ -2,7 +2,7 @@
 accompanistInsets = "0.15.0"
 activityKtx = "1.8.2"
 agp = "7.4.2"
-bridge = "1.0.5"
+openweb3 = "1.0.7"
 glide = "4.15.1"
 converterMoshi = "2.9.0"
 kotlin = "1.8.10"
@@ -36,11 +36,11 @@ accompanist-insets-ui = { module = "com.google.accompanist:accompanist-insets-ui
 accompanist-systemuicontroller = { module = "com.google.accompanist:accompanist-systemuicontroller", version.ref = "accompanistInsets" }
 androidx-activity-ktx = { module = "androidx.activity:activity-ktx", version.ref = "activityKtx" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
-bridge = { module = "io.openweb3:bridge", version.ref = "bridge" }
+bridge = { module = "io.openweb3:bridge", version.ref = "openweb3" }
 glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 glideCompiler = { module = "com.github.bumptech.glide:compiler", version.ref = "glide" }
 converter-moshi = { module = "com.squareup.retrofit2:converter-moshi", version.ref = "converterMoshi" }
-core = { module = "io.openweb3:core", version.ref = "bridge" }
+core = { module = "io.openweb3:core", version.ref = "openweb3" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
