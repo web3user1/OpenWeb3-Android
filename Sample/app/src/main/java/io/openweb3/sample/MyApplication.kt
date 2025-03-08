@@ -56,6 +56,7 @@ class MyApplication : Application(), IAppDelegate {
             .isDark(false)
             .maxCachePage(5)
             .resourcesProvider(null)
+            //.bridgeProviderFactory(MyBridgeProviderFactory())
             .floatWindowSize(90, 159)
             .build()
 
@@ -70,6 +71,7 @@ class MyApplication : Application(), IAppDelegate {
             context = this,
             verifier = "123",
             isDev = false,
+            apiHost = "https://apiserver.mimo.immo",
             idTokenProvider = { idTokenProvider() },
             onVerifierSuccess = {
 
