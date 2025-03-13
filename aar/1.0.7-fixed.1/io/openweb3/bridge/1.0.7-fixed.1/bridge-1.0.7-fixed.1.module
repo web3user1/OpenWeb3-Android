@@ -1,0 +1,102 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.openweb3",
+    "module": "bridge",
+    "version": "1.0.7-fixed.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.6"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.8.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "bridge-1.0.7-fixed.1.aar",
+          "url": "bridge-1.0.7-fixed.1.aar",
+          "size": 2648,
+          "sha512": "1571510b09fcf343fea6de5e0bbfe6f92d0c5f71f68123ba35e525d39f13afaa142950d129b9212f965701972f5f8b6b12510fcac9df7856e60fbda8c9068ed6",
+          "sha256": "487999717da945721bd16fdcc57fb7cf2e689fc816479ae446e9ac9cab915a2c",
+          "sha1": "b9bf3a82d00204d95155abeb44632a96b4de49b1",
+          "md5": "b45fb7bc3b6c3c0ef1495f42a1c616be"
+        }
+      ]
+    },
+    {
+      "name": "releaseRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.core",
+          "module": "core-ktx",
+          "version": {
+            "requires": "1.13.1"
+          }
+        },
+        {
+          "group": "androidx.appcompat",
+          "module": "appcompat",
+          "version": {
+            "requires": "1.6.1"
+          }
+        },
+        {
+          "group": "androidx.activity",
+          "module": "activity-ktx",
+          "version": {
+            "requires": "1.8.2"
+          }
+        },
+        {
+          "group": "com.google.android.material",
+          "module": "material",
+          "version": {
+            "requires": "1.11.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.8.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "bridge-1.0.7-fixed.1.aar",
+          "url": "bridge-1.0.7-fixed.1.aar",
+          "size": 2648,
+          "sha512": "1571510b09fcf343fea6de5e0bbfe6f92d0c5f71f68123ba35e525d39f13afaa142950d129b9212f965701972f5f8b6b12510fcac9df7856e60fbda8c9068ed6",
+          "sha256": "487999717da945721bd16fdcc57fb7cf2e689fc816479ae446e9ac9cab915a2c",
+          "sha1": "b9bf3a82d00204d95155abeb44632a96b4de49b1",
+          "md5": "b45fb7bc3b6c3c0ef1495f42a1c616be"
+        }
+      ]
+    }
+  ]
+}
